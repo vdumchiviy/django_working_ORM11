@@ -1,9 +1,16 @@
 from django.shortcuts import render
+from phones.models import Phone
 
 
 def show_catalog(request):
     template = 'catalog.html'
-    context = {}
+    sort = request.GET.get('sort')
+    if sort in ('name', 'price', '-price'):
+        phones = Phone.objects.order_by(sort)
+    else:
+        phones = Phone.objects.all()
+
+    context = {'phones': phones}
     return render(request, template, context)
 
 

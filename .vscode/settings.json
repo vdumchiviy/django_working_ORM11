@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "c:\\_work\\_venv\\venv-django\\Scripts\\python.exe"
+    "python.pythonPath": "c:\\_work\\_venv\\venv-django\\Scripts\\python.exe",
+    "editor.formatOnType": true,
+    "editor.wordWrapColumn": 120
 }
