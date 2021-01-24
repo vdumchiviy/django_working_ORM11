@@ -3,12 +3,19 @@
 
 {% block title %}Телефон{% endblock %}
 {% block content %}
-    <div class="container">
-        <div class="header">
-            <h1>Телефон</h1>
-        </div>
-        <div class="content">
-
-        </div>
+<div class="container">
+    <div class="header">
+        <h1>Phone</h1>
     </div>
+    <div class="content">
+        <a href="/{{ phone.slug }}">
+            <h2>{{ phone.name }}</h2>
+        </a>
+        <h3>Price: {{ phone.price_text }}R</h3>
+        <img src="{{ phone.image }}">
+    </div>
+</div>
+<a href="../">
+    <h3>Catalogue</h3>
+</a>
 {% endblock %}

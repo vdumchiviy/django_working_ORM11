@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Каталог{% endblock %}
+{% block title %}Cata;pgue{% endblock %}
 {% block content %}
 <div class="container">
     <div class="header">
@@ -14,9 +14,10 @@
 
     <div class="content">
         {% for phone in phones %}
-        <div class=section>{{ phone.name }}
-            Price: {{ phone.price_text }}р.
-            <img src="{{ phone.image }}" alt="{{ phone.name }}">
+        <div class=section>
+            <p><a href="/catalog/{{phone.slug}}">{{ phone.name }}</a></p>
+            <p>Price: {{ phone.price_text }}р.</p>
+            <p><img src="{{ phone.image }}" alt="{{ phone.name }}"></p>
         </div>
         {% endfor %}
 
